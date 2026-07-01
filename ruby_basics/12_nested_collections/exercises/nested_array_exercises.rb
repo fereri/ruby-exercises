@@ -54,6 +54,12 @@ end
 
 def find_favorite(array_of_hash_objects)
   # take an array_of_hash_objects and return the hash which has the key/value
+  p array_of_hash_objects
+  array_of_hash_objects.each do |k|
+    return k if k[:is_my_favorite?]
+  end
+
+  return nil
   # pair :is_my_favorite? => true. If no hash returns the value true to the key
   # :is_my_favorite? it should return nil
 
